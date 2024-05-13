@@ -1,2 +1,2 @@
 #!/bin/bash
-git --help
+git --help -h
