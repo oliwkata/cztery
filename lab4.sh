@@ -58,4 +58,18 @@ if [[ $1 == "--init" ]]; then
 fi
 
 
+function error {
+	for ((i=1; i<=$1; i++)); do
+		echo "To jest plik error$i.txt" > error$i.txt
+	done
+}
+
+if [[ $1 == "--error" ]]; then 
+	if [[ -z $2 ]]; then
+		error 100
+	elif [[ $2 =~ ^[0-9]+$ ]]; then
+		error $2
+	fi 
+fi 
+
 
