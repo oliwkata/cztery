@@ -72,4 +72,5 @@ if [[ $1 == "--error" ]]; then
 	fi 
 fi 
 
+echo -e "log*.txt\nerror*\n" >> .gitignore
 
