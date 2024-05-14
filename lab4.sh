@@ -18,11 +18,26 @@ function logs {
 	done
 }
 
+
+
 if [[ $1 == "--logs" ]]; then
 	if [[ -z $2 ]]; then
 		logs
 	fi
 fi
 
+function logs_n {
+	for ((i=1; i<=$1; i++)); do
+		echo "Nazwa pliku: log$i.txt" > log$i.txt
+		echo "Nazwa skryptu: lab4.sh" >> log$i.txt
+		echo "data: $(date)" >> log$i.txt
+	done
+}
+
+if [[ $1 == "--logs" ]]; then
+	if [[ $2 =~ ^[0-9]+$ ]]; then
+		logs_n $2
+	fi
+fi
 
 
