@@ -51,4 +51,11 @@ if [[ $1 == "--help" || $1 == "-h" ]]; then
 	help
 fi
 
+if [[ $1 == "--init" ]]; then
+	git init
+	export PATH=$PATH:$(pwd)
+	echo "Sklonowano repozytorium i dodano do PATH."
+fi
+
+
 
