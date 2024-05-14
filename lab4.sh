@@ -6,7 +6,7 @@ fi
 
 echo "log*.txt" > .gitignore
 
-if [[ $1 == "--date" ]]; then
+if [[ $1 == "--date" || $1 == "-d" ]]; then
 	date
 fi
 
@@ -20,7 +20,7 @@ function logs {
 
 
 
-if [[ $1 == "--logs" ]]; then
+if [[ $1 == "--logs" || $1 == "-l" ]]; then
 	if [[ -z $2 ]]; then
 		logs
 	fi
@@ -43,11 +43,11 @@ fi
 function help {
 	echo"lab4.sh --date	- wyświetla datę"
 	echo"lab4.sh --logs	- tworzy automatycznie 100 plików logx.txt"
-	echo"lab4.sh --logs N   - tworzy aautomatycznie N plików log.txt"
+	echo"lab4.sh --logs N   	- tworzy automatycznie N plików log.txt"
 	echo"lab4.sh --help	- wyświetla wszytskie dostępne opcje"
 }
 
-if [[ $1 == "--help" ]]; then
+if [[ $1 == "--help" || $1 == "-h" ]]; then
 	help
 fi
 
