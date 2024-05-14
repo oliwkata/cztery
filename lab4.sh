@@ -6,5 +6,9 @@ fi
 
 echo "log*.txt" > .gitignore
 
+if [[ $1 == "--date" ]]; then
+	date
+fi
+
 
 
