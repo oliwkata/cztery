@@ -41,10 +41,10 @@ if [[ $1 == "--logs" ]]; then
 fi
 
 function help {
-	echo"lab4.sh --date	- wyświetla datę"
-	echo"lab4.sh --logs	- tworzy automatycznie 100 plików logx.txt"
+	echo"lab4.sh --date (-d)	- wyświetla datę"
+	echo"lab4.sh --logs (-l)	- tworzy automatycznie 100 plików logx.txt"
 	echo"lab4.sh --logs N   	- tworzy automatycznie N plików log.txt"
-	echo"lab4.sh --help	- wyświetla wszytskie dostępne opcje"
+	echo"lab4.sh --help (-h)	- wyświetla wszytskie dostępne opcje"
 }
 
 if [[ $1 == "--help" || $1 == "-h" ]]; then
