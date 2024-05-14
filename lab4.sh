@@ -40,4 +40,15 @@ if [[ $1 == "--logs" ]]; then
 	fi
 fi
 
+function help {
+	echo"lab4.sh --date	- wyświetla datę"
+	echo"lab4.sh --logs	- tworzy automatycznie 100 plików logx.txt"
+	echo"lab4.sh --logs N   - tworzy aautomatycznie N plików log.txt"
+	echo"lab4.sh --help	- wyświetla wszytskie dostępne opcje"
+}
+
+if [[ $1 == "--help" ]]; then
+	help
+fi
+
 
